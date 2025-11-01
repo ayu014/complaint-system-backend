@@ -15,7 +15,7 @@ COPY src ./src
 RUN mvn clean install
 
 # Stage 2: Create the final lightweight image
-FROM openjdk:17-jre-slim
+FROM eclipse-temurin:17-jre-jammy
 
 WORKDIR /app
 
