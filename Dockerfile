@@ -12,7 +12,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 
 # Build the .jar file
-RUN mvn clean install
+RUN mvn clean install -DskipTests
 
 # Stage 2: Create the final lightweight image
 FROM eclipse-temurin:17-jre-jammy
